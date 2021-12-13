@@ -4,6 +4,8 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 from .models import CustomUser
 
+
+
 class CustomUserSerializer(serializers.ModelSerializer):
 
     class Meta:
