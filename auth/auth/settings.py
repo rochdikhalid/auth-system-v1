@@ -4,12 +4,8 @@ import os
 
 
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -20,7 +16,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,12 +28,6 @@ INSTALLED_APPS = [
     'users',
     'rest_framework_simplejwt.token_blacklist',
 ]
-
-# Remember the following Permissions:
-# AllowAny
-# IsAuthenticated
-# IsAdminUser
-# IsAuthenticatedOrReadOnly
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -97,9 +86,6 @@ DATABASES = {
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -115,19 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -144,7 +122,6 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 # Setting JWT settings
 SIMPLE_JWT = {
-
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes = 5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days = 1),
     'ROTATE_REFRESH_TOKENS': True,
@@ -173,7 +150,6 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes = 5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days = 1),
-
 }
 
 # EMAIL SERVER SETTINGS
