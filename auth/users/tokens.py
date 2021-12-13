@@ -1,6 +1,8 @@
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils import six
 
+
+
 class TokenGenerator(PasswordResetTokenGenerator):
 
     # To hash user's primary key and user state for producing a token that is invalidated when it's used
