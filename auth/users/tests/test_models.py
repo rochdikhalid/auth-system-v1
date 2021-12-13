@@ -3,19 +3,16 @@ from users.models import CustomUser
 
 
 
-
 # TestCase is going to create a temporary clean database which will be detroyed after the unit test stops
 class CustomUserTest(TestCase): 
 
     # To create a user object that we'll use but not modify in any of the tests
     @classmethod
-    def setUpTestData(cls):
-        
+    def setUpTestData(cls): 
         CustomUser.objects.create_user(
             email = 'randomuser0@gmail.com',
             username = 'randomuser0'
         )
-
         CustomUser.objects.create_superuser(
             email = 'randomsuperuser0@gmail.com', 
             username = 'randomsuperuser0'
@@ -111,6 +108,3 @@ class CustomUserTest(TestCase):
         self.assertEqual(object_plural, 'users')
 
     
-
-
-
