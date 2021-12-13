@@ -12,6 +12,8 @@ from .models import CustomUser
 from .serializers import CustomUserSerializer, ResetPasswordRequestSerializer, ResetPasswordSerializer, LoginSerializer, LogoutSerializer
 from .tokens import account_activation_token, reset_password_token
 
+
+
 # The register view
 class RegisterCustomUser(APIView):
 
@@ -137,5 +139,3 @@ class LogoutCustomUser(APIView):
         if serializer.is_valid():
             serializer.save()
         return Response(serializer.errors, status = status.HTTP_204_NO_CONTENT)
-
-
