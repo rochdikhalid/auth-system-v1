@@ -1,18 +1,16 @@
 from rest_framework import status
-from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import CustomUserSerializer, ResetPasswordRequestSerializer, ResetPasswordSerializer, LoginSerializer, LogoutSerializer
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from .tokens import account_activation_token, reset_password_token
 from .models import CustomUser
-
+from .serializers import CustomUserSerializer, ResetPasswordRequestSerializer, ResetPasswordSerializer, LoginSerializer, LogoutSerializer
+from .tokens import account_activation_token, reset_password_token
 
 # The register view
 class RegisterCustomUser(APIView):
