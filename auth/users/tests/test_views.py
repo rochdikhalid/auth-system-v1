@@ -9,7 +9,6 @@ class TestConfig(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-
         CustomUser.objects.create_user(
             email = 'randomuser0@gmail.com',
             username = 'randomuser0',
@@ -23,11 +22,6 @@ class TestConfig(TestCase):
             'username': 'randomuser1',
             'password': '2HJ1vRV0Z&3iA',
         }
-
-    """
-    def setUp(self):
-        self.client = Client()
-    """
 
 # To test the register view
 class TestRegisterView(TestConfig):
