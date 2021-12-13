@@ -4,6 +4,7 @@ from django.contrib.auth.models import Group
 from .models import CustomUser
 
 
+
 # Some admin configuration
 class UserAdminConfig(BaseUserAdmin):
 
