@@ -24,9 +24,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'users',
-    'rest_framework_simplejwt.token_blacklist',
+    'users',
 ]
 
 REST_FRAMEWORK = {
@@ -160,4 +161,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_PORT = 587
 
 # Password reset link is expired after one hour
-PASSWORD_RESET_TIMEOUT = 1200 # (in seconds)
+PASSWORD_RESET_TIMEOUT = 1200 # (in second)
